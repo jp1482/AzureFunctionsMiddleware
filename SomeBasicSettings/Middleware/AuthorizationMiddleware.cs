@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace SomeBasicSettings.Middleware
 {
+    /// <summary>
+    /// Authorization middleware.
+    /// </summary>
     public class AuthorizationMiddleware
         : IFunctionsWorkerMiddleware
     {

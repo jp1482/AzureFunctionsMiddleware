@@ -66,6 +66,14 @@ namespace SomeBasicSettings.Middleware
             pinfo.SetValue(feature, responseData);
         }
 
+        /// <summary>
+        /// Create response from function context and with specified object and status code.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="functionContext"></param>
+        /// <param name="statusCode"></param>
+        /// <param name="data"></param>
+        /// <returns>return task.</returns>
         public static async Task CreateJsonResponse<T>(this FunctionContext functionContext, System.Net.HttpStatusCode statusCode, T data)
         {
             var request = functionContext.GetHttpRequestData();
