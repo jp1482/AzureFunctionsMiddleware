@@ -13,7 +13,8 @@ public class Program
         var host = new HostBuilder()
             .ConfigureFunctionsWorkerDefaults(configure=>
             {
-                configure.UseMiddleware<SimpleMiddleware>();
+                configure.UseMiddleware<BearerAuthenticationMiddleware>();
+                configure.UseMiddleware<AuthorizationMiddleware>();
             })
             .Build();
 
